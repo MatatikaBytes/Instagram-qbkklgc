@@ -8,8 +8,8 @@ environments:
       extractors:
       - name: tap-instagram
         select:
-        - 'users.*'
-        - 'user_insights_followers.*'
+        - users.*
+        - user_insights_followers.*
 - name: staging
 - name: prod
 plugins:
@@ -21,10 +21,14 @@ plugins:
   - name: target-postgres
     variant: matatika
     pip_url: git+https://github.com/Matatika/pipelinewise-target-postgres@v0.2.0
+  - name: target-bigquery
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/target-bigquery.git@v1.0
   transformers:
   - name: dbt
     variant: dbt-labs
-    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 dbt-bigquery~=1.7.0 certifi==2025.1.31
+    pip_url: dbt-core~=1.7.0 dbt-postgres~=1.7.0 dbt-snowflake~=1.7.0 dbt-bigquery~=1.7.0
+      certifi==2025.1.31
   files:
   - name: files-dbt
     variant: matatika
