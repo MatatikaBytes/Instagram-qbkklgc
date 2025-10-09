@@ -32,7 +32,7 @@
     {
       "name": "oauth_credentials.scope",
       "kind": "string",
-      "value": "802033889351378",
+      "value": "827787603263258",
       "label": "Facebook OAuth config_id is used to link to the configuration to use",
       "description": "The specific configuration permissions for which we are requesting user consent.",
       "hidden": true,
