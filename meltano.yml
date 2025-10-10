@@ -3,20 +3,16 @@ default_environment: dev
 project_id: 46d060a7-a1a7-4664-bb11-d7ec7b6597fa
 environments:
 - name: dev
-  config:
-    plugins:
-      extractors:
-      - name: tap-instagram
-        select:
-        - users.*
-        - user_insights_followers.*
 - name: staging
 - name: prod
 plugins:
   extractors:
   - name: tap-instagram
-    variant: voxmedia
-    pip_url: tap-instagram
+    variant: matatika
+    pip_url: git+https://github.com/Matatika/tap-instagram
+    select:
+    - users.*
+    - user_insights_followers.*
   loaders:
   - name: target-postgres
     variant: matatika
