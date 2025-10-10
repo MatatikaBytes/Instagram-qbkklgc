@@ -69,7 +69,7 @@
       "description": "A token that grants access to the Instagram API for a specific user account.",
       "hidden": true,
       "sensitive": true,
-      "required": "true",
+      "required": false,
       "protected": false
     }
   ]
